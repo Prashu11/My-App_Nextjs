@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Installing dependencies...
+      - npm install # Installs all required dependencies
+
+  build:
+    commands:
+      - echo Building the Next.js application...
+      - npm run build # Builds the Next.js app for production
+
+artifacts:
+  files:
+    - '**/*' # Includes all files for deployment
+  base-directory: .next # The directory where Next.js outputs its build files
+
+cache:
+  paths:
+    - node_modules/**/* # Caches node_modules to speed up subsequent builds
