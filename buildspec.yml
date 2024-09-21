@@ -13,8 +13,8 @@ phases:
 
 artifacts:
   files:
-    - '**/*' # Includes all files for deployment
-  base-directory: .next # The directory where Next.js outputs its build files
+    - '**/*'  # Include all files in the project directory, not just the .next folder
+  base-directory: ./  # Base directory should be the project root, not .next
 
 cache:
   paths:
